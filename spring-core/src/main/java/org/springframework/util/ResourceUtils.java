@@ -8,6 +8,85 @@ import java.net.URLConnection;
 public abstract class ResourceUtils {
 
     /**
+     * classpath资源定位符前缀
+     */
+    public static final String CLASSPATH_URL_PREFIX = "classpath:";
+
+    /**
+     * file资源定位符前缀
+     */
+    public static final String FILE_URL_PREFIX = "file:";
+
+    /**
+     * jar资源定位符前缀
+     */
+    public static final String JAR_URL_PREFIX = "jar:";
+
+    /**
+     * war资源定位符前缀
+     */
+    public static final String WAR_URL_PREFIX = "war:";
+
+    /**
+     * file资源定位符协议名
+     */
+    public static final String URL_PROTOCOL_FILE = "file";
+
+    /**
+     * jar资源定位符协议名
+     */
+    public static final String URL_PROTOCOL_JAR = "jar";
+
+    /**
+     * war资源定位符协议名
+     */
+    public static final String URL_PROTOCOL_WAR = "war";
+
+    /**
+     * zip资源定位符协议名
+     */
+    public static final String URL_PROTOCOL_ZIP = "zip";
+
+    /**
+     * wsjar资源定位符协议名
+     */
+    public static final String URL_PROTOCOL_WSJAR = "wsjar";
+
+    /**
+     *  vfszip资源定位符协议名
+     */
+    public  static final String URL_PROTOCOL_VFSJZIP = "vfszip";
+
+    /**
+     * vfsfile资源定位符协议名
+     */
+    public static final String URL_PROTOCOL_VFSFILE = "vfsfile";
+
+    /**
+     * vfs资源定位符协议名
+     */
+    public static final String URL_PROTOCOL_VFS = "vfs";
+
+    /**
+     * jar文件名后缀
+     */
+    public static final String JAR_FILE_EXTENSION = ".jar";
+
+    /**
+     * jar资源定位符分隔符
+     */
+    public static final String JAR_URL_SEPARATOR = "!/";
+
+    /**
+     * war资源定位符分隔符
+     */
+    public static final String WAR_URL_SEPARATOR = "*/";
+
+
+
+
+
+    /**
      * 判断资源路径是否为有效的Url路径
      * @param resourceLocation 资源路径地址
      * @return
