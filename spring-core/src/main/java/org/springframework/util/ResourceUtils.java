@@ -1,0 +1,137 @@
+package org.springframework.util;
+
+import java.io.File;
+import java.net.URI;
+import java.net.URL;
+import java.net.URLConnection;
+
+public abstract class ResourceUtils {
+
+    /**
+     * 判断资源路径是否为有效的Url路径
+     * @param resourceLocation 资源路径地址
+     * @return
+     */
+    public static boolean isURL(String resourceLocation){
+        return false;
+    }
+
+    /**
+     * 根据给定的资源路径获取Url资源定位符对象
+     * @param resourceLocation 资源路径地址
+     * @return
+     */
+    public static URL getURL(String resourceLocation){
+        return null;
+    }
+
+    /**
+     * 根据给定的Url获取文件
+     * @param url Url资源定位符对象
+     * @return
+     */
+    public static File getFile(URL url){
+        return null;
+    }
+
+    /**
+     * 根据给定Url和描述获取文件
+     * @param url Url资源定位符对象
+     * @param description 描述
+     * @return
+     */
+    public static File getFile(URL url,String description){
+        return null;
+    }
+
+    /**
+     * 格局给定的资源标识符和描述获取文件
+     * @param uri 资源标识符
+     * @param desciption 描述
+     * @return
+     */
+    public static File getFile(URI uri,String desciption){
+        return null;
+    }
+
+    /**
+     * 根据资源描述符获取文件
+     * @param uri 资源描述符
+     * @return
+     */
+    public static File getFile(URI uri){
+        return null;
+    }
+
+    /**
+     * 判断给定的资源定位符是否为文件资源定位符
+     * @param url 资源定位符
+     * @return
+     */
+    public static boolean isFileUrl(URL url){
+        return false;
+    }
+
+    /**
+     * 判断给定的资源定位符是否为jar资源定位符
+     * @param url 资源定位符
+     * @return
+     */
+    public static boolean isJarURL(URL url){
+        return false;
+    }
+
+    /**
+     * 判断给定的资源定位符是否为jar文件资源定位符
+     * @param url 资源定位符
+     * @return
+     */
+    public static boolean jarFileURL(URL url){
+        return false;
+    }
+
+    /**
+     * 根据给定资源定位符获取jar文件资源定位符
+     * @param url 资源定位符
+     * @return
+     */
+    public static URL extractJarFileURL(URL url){
+        return null;
+    }
+
+    /**
+     * 根据给定的资源定位符获取war或者jar文件资源定位符
+     * @param url 资源定位符
+     * @return
+     */
+    public static URL extractArchiveURL(URL url){
+        return null;
+    }
+
+    /**
+     * 根据资源定位符获取资源标识符
+     * @param url 资源定位符
+     * @return
+     */
+    public static URI toURI(URL url){
+        return  null;
+    }
+
+
+    /**
+     * 根据资源路径获取资源标识符
+     * @param resourceLocation 资源路径
+     * @return
+     */
+    public static URI toURI(String resourceLocation){
+        return null;
+    }
+
+    /**
+     * 对特定的URLConnection设置使用缓存
+     * @param con
+     */
+    public static void useCacheIfNecessary(URLConnection con){
+        con.setUseCaches(con.getClass().getSimpleName().startsWith("JNLP"));
+    }
+}
